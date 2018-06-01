@@ -1,0 +1,41 @@
+<form class="well">
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="add todo...">
+		<br>
+		<input type="text" class="form-control" placeholder="add description">
+		<br>
+		<button class="btn btn-primary">ADD NEW TODO</button>
+	</div>
+</form>
+
+<div class="task-list" >
+	<div class="row">
+		<div class="col-md-3">
+			<b>Todo</b>
+		</div>
+		<div class="col-md-3">
+			<b>Description</b>
+		</div>
+		<div class="col-md-3">
+			<b>Operations</b>
+		</div>
+		<br>
+		<br>
+	</div>
+	<div class="row" *ngFor="let todo of todos;let i=index">
+		<div class="col-md-3">
+			{{i+1}} {{todo.task}}
+		</div>
+		<div class="col-md-3">
+			{{todo.description}}
+		</div>
+		<div class="col-md-1">
+			<button class="btn btn-danger">Delete</button>
+		</div>
+		<div class="col-md-1">
+			<button class="btn btn-primary">Edit</button>
+		</div>
+		<br>
+		<br>
+	</div>
+</div>
