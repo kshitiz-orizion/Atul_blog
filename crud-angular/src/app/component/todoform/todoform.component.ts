@@ -19,4 +19,18 @@ export class TodoformComponent implements OnInit {
   	 this.todo=this._todoService.getter();
   }
 
+  processTodo(){
+  	if(this.todo._id==undefined){
+  		this._todoService.createTodo(this.todo).subscribe(data=>{
+ 		console.log(data);	
+ 		this._router.navigateByUrl('/');
+  	});
+  	}else{
+  		this._todoService.updateTodo(this.todo).subscribe((todo)=>{
+  			console.log(todo);
+  			this._router.navigateByUrl('/');
+  		});
+  	}
+  }
+
 }

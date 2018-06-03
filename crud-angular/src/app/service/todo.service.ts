@@ -28,12 +28,12 @@ export class TodoService {
    }
 
    createTodo(todo:Todo){
-   return this.http.post('http://localhost:3000/todo',JSON.stringify(todo)).map(res=>res.json()).catch(this.errorHandler);
+   return this.http.post('http://localhost:3000/todo',todo).map(res=>res.json()).catch(this.errorHandler);
    }
 
 
   updateTodo(todo:Todo){
-   return this.http.put('http://localhost:3000/todo/'+todo._id,JSON.stringify(todo)).map(res=>res.json()).catch(this.errorHandler);
+   return this.http.put('http://localhost:3000/todo/'+todo._id,todo).map(res=>res.json()).catch(this.errorHandler);
    }
 
    errorHandler(error:Response){
