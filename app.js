@@ -5,7 +5,7 @@ var mongoose=require('mongoose');
 
 var todo=require('./routes/todo');
 
-var port=3000;
+var port=process.env.PORT || 8080;
 
 var app=express();
 var db=mongoose.connect('mongodb://localhost/Todo');
