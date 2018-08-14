@@ -19,7 +19,7 @@ class AddTodo extends Component{
 		}
 		else{
 			let id=this.props.history.location.state.newid;
-			axios.get('http://localhost:8080/todo/'+id).then(res=>{
+			axios.get('/todo/'+id).then(res=>{
 				this.setState({
 					task:res.data.task,
 					description:res.data.description
@@ -36,12 +36,12 @@ class AddTodo extends Component{
 
 	handleSubmit=(event)=>{
 		if(this.props.history.location.state===undefined){
-			axios.post('http://localhost:8080/todo',this.state).then(res=>{
+			axios.post('/todo',this.state).then(res=>{
 				this.props.history.push('/');
 			});
 		}else{
 			let id=this.props.history.location.state.newid;
-			axios.put('http://localhost:8080/todo/'+id,this.state).then(res=>{
+			axios.put('/todo/'+id,this.state).then(res=>{
 				this.props.history.push('/');
 			});
 		}

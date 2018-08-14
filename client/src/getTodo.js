@@ -13,12 +13,12 @@ class GetTodo extends Component {
 		}		
 	}
 	componentDidMount(){
-		axios.get('http://localhost:8080/todo').then(res=>{
+		axios.get('/todo').then(res=>{
 			this.setState({todo:res.data});
 		});
 	}
 	deleteTodo(id){
-		axios.delete('http://localhost:8080/todo/'+id).then(res=>{
+		axios.delete('/todo/'+id).then(res=>{
 			for(var i=0;i<this.state.todo.length;i++){
 				if(id===this.state.todo[i]._id){
 					this.state.todo.splice(i,1);
