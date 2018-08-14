@@ -2,7 +2,7 @@ var express=require('express');
 var path=require('path');
 var bodyParser=require('body-parser');
 var mongoose=require('mongoose');
-
+require("dotenv").config();
 var todo=require('./routes/todo');
 
 var port=process.env.PORT || 5000;
