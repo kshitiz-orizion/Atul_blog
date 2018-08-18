@@ -1,0 +1,42 @@
+.backgroundDelete{	
+	width:100%;
+	height: 100%;
+	opacity:0.9;
+	background-color: grey;
+	z-index:1;
+	position: absolute;
+	top:0px;	
+}
+.deleteConfirmation{
+	width:500px;
+	height:300px;
+	background-color:white;
+	z-index:2;
+	top:-200px;
+	position: relative;
+	margin:0 auto;
+	animation-name: new-modal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in;
+}
+@keyframes new-modal{
+	0%{top:-300px;}
+	100%{top:-100px;}
+}
+.deleteHeading{
+	font-family: roboto;
+	color:blue;
+	position: relative;
+	font-size:50px;
+}
+
+.yesButton{
+	margin:50px 50px 50px 50px;
+	width:100px;
+}
+
+.noButton{
+	margin:50px 50px 50px 50px;
+	width:100px;
+}

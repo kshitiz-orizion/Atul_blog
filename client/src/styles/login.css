@@ -1,0 +1,30 @@
+.LoginBtn{
+	width:50%;
+	height:50px;
+	background-color: orange;
+
+}
+.SignupBtn{
+	width:50%;
+	height: 50px;
+	background-color: pink;
+
+}
+.LoginForm{
+	margin-top:10px;
+	float: left;
+	width:100vw;
+}
+.LoginHeading{
+	font-family: italic;
+	font-size:50px;
+	color:red;
+	margin-top: 50px;
+}
+
+.SignOut{
+	float: right;
+	position: relative;
+	top:-75px;
+	left:0px;
+}

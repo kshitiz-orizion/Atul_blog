@@ -4,7 +4,7 @@ var bodyParser=require('body-parser');
 var mongoose=require('mongoose');
 require("dotenv").config();
 var todo=require('./routes/todo');
-
+var login=require('./routes/login');
 var port=process.env.PORT || 5000;
 
 var app=express();
@@ -25,6 +25,7 @@ app.use(function(req,res,next){
 	next();
 })
 app.use('/',todo);
+app.use('/',login);
 app.listen(port,function(){
 	console.log('server started on port'+port);
 });

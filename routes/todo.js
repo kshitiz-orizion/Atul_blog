@@ -11,14 +11,12 @@ router.get('/todo', function (req, res) {
 
 router.get('/todo/:id', function (req, res) {
     Todo.findOne({_id:req.params.id},function(err, todo){
-        if(err)
-      res.send(err);
+        if(err)  res.send(err);
     res.json(todo);
   });
 });
 
 router.post('/todo', function(req, res) {
-		console.log(req.body);
            Todo.create(req.body, function(err, todo){
             if(err) throw err;
              res.json(todo);
